@@ -67,11 +67,6 @@ public class CurrencyConversionSteps {
             BigDecimal actual = new BigDecimal(convertedAmount.replaceAll(",", ""));
             BigDecimal expected = new BigDecimal(validateConvertedAmount.replaceAll(",", ""));
 
-            /*
-            assertThat(actual)
-                    .as("Converted value for %s -> %s", fromCurrency, toCurrency)
-                    .isCloseTo(expected, withPercentage(1));
-            */
             boolean passed = false;
             try {
                 assertThat(actual)
@@ -86,7 +81,7 @@ public class CurrencyConversionSteps {
 
 // Print result
             System.out.printf(
-                    "Test %s -> %s | Expected: %.4f | Actual: %.4f | Result: %s%n",
+                    "Test %s -> %s | Expected: %.2f | Actual: %.2f | Result: %s%n",
                     fromCurrency,
                     toCurrency,
                     expected,
