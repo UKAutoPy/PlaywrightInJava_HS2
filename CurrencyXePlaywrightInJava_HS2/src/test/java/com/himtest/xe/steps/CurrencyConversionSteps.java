@@ -81,9 +81,10 @@ public class CurrencyConversionSteps {
 
 // Print result
             System.out.printf(
-                    "Test %s -> %s | Expected: %.2f | Actual: %.2f | Result: %s%n",
+                    "Test %s -> %s - Amount: %s | Expected: %.2f | Actual: %.2f | Result: %s%n",
                     fromCurrency,
                     toCurrency,
+                    amount,
                     expected,
                     actual,
                     passed ? "PASS" : "FAIL"
